@@ -15,6 +15,7 @@ HISTFILESIZE=2000
 export LANG=en_US.UTF-8
 export EDITOR="vim"
 export TERMINAL="urxvt"
+[ -e "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 
 # aliases
 alias sl='ls --color=auto -F'
