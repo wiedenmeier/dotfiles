@@ -19,7 +19,7 @@ set $mod Mod1
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-# font pango:Inconsolata 14
+font pango:Inconsolata 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -36,6 +36,11 @@ bindsym $mod+Shift+d exec dmenu_run
 # Misc runners
 bindsym $mod+Shift+u exec "firefox --new-window"
 bindsym $mod+Shift+p exec zathura
+
+# lock screen
+set $lock i3lock -d -i /usr/share/backgrounds/warty-final-ubuntu.png -t
+bindsym $mod+Delete exec $lock
+bindsym $mod+Shift+Delete exec $lock && systemctl suspend
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -158,3 +163,6 @@ bar {
 # By Application rules
 for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Sxiv"] floating enable, border normal
+
+# run .xconfig script (required as gdm doesn't see .xsession when ~ encrypted)
+exec urxvt -e /home/waw722/.xconfig

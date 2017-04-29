@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xmodmap ~/.Xmodmap
+xrdb -I$HOME merge ~/.Xresources
+xset -dpms
