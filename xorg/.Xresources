@@ -1,6 +1,7 @@
 ! colorschemes
 !#include ".Xresources.d/colors_solarized"
 #include ".Xresources.d/colors_reddish"
+!#include ".Xresources.d/colors_gruvbox"
 
 ! fonts
 Xft.antialias: true
