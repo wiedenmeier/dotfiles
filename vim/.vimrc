@@ -1,5 +1,12 @@
 " .vimrc
 
+" modules
+call pathogen#infect()
+
+" file management
+set autoread
+set autochdir
+
 " indentation
 set tabstop=4
 set shiftwidth=4
@@ -14,7 +21,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-" auto formatting
+" text formatting
+set showmatch
 set textwidth=79
 set formatoptions=c,q,r,t
 
@@ -22,26 +30,28 @@ set formatoptions=c,q,r,t
 set relativenumber
 set number
 set colorcolumn=+1
-
-" text display
-set showmatch
-
-" status bar
-set showcmd
-set ruler
-set wildmenu
+set ttyfast
+set splitbelow
 set title
 
-" colors
-set background=dark
+" command bar
+set showcmd
+set wildmenu
 
-" file management
-set autoread
-set autochdir
+" status bar
+set laststatus=2
+let g:airline_skip_empty_sections=1
+let g:airline_section_z="%l/%L:%#__accent_bold#%v%#__restore__#"
+
+" colors
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="medium"
 
 " syntax highlighting
 filetype plugin indent on
 syntax on
 
-" modules
-"call pathogen#infect()
+" configure nerdtree
+nnoremap <F2> :NERDTreeToggle<CR>
