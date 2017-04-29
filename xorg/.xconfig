@@ -3,3 +3,4 @@
 xmodmap ~/.Xmodmap
 xrdb -I$HOME merge ~/.Xresources
 xset -dpms
+[ -x ~/.screenlayout/default.sh ] && ~/.screenlayout/default.sh
