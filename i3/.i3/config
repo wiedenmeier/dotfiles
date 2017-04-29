@@ -165,4 +165,4 @@ for_window [class="mpv"] floating disable, border 1pixel
 for_window [class="Sxiv"] floating enable, border normal
 
 # run .xconfig script (required as gdm doesn't see .xsession when ~ encrypted)
-exec urxvt -e ~/.xconfig
+exec ~/.xconfig
