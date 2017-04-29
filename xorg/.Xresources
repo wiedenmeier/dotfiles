@@ -12,5 +12,5 @@ Xft.rgba: rgb
 
 ! urxvt settings
 URxvt*saveLines: 2000
-URxvt*font: xft:Inconsolata:size=12
+URxvt*font: xft:Inconsolata:size=11
 URxvt*scrollBar: false
