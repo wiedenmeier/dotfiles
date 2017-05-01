@@ -18,7 +18,7 @@ bindsym $mod+Shift+q kill
 # class                 border  bg      fg      indic.  child
 client.focused          #ebdbb2 #ebdbb2 #282828 #282828 #928374
 client.focused_inactive #ebdbb2 #282828 #ebdbb2 #282828 #928374
-client.unfocused        #32302f #282828 #a89984 #282828 #282828
+client.unfocused        #928374 #282828 #a89984 #282828 #282828
 
 # lock screen
 set $lock i3lock -d -i /usr/share/backgrounds/warty-final-ubuntu.png -t
