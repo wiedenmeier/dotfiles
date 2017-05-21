@@ -1,0 +1,4 @@
+# packages required for i3 config
+i3
+i3lock
+suckless-tools

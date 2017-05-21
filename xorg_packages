@@ -1,0 +1,5 @@
+# packages required for i3 config
+rxvt-unicode-256color
+x11-server-utils
+arandr
+feh
