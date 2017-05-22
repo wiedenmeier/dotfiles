@@ -6,10 +6,12 @@ error() {
 }
 
 setup() {
-    # ensure stow is installed
-    which stow ||
-        sudo apt-get install stow ||
-        error "GNU stow not available"
+    # update package lists
+    sudo apt-get update
+}
+
+install_packages() {
+    xargs -a <(grep '^\s*[^#]' "${1}") -- sudo apt-get install -y
 }
 
 usage() {
@@ -30,20 +32,16 @@ bad_usage() {
 }
 
 main() {
-    # FIXME: these should be changed to get abs path
-    cwd="$(dirname ${0})"
-    target_dir="$cwd/.."
-
     # parse args
-    opts="fc"
-    getopt_out=$(getopt --name "${0##*/}" \
+    local opts="fc"
+    local getopt_out=$(getopt --name "${0##*/}" \
         --options "${opts}" -- "${@}") &&
         eval set -- "${getopt_out}" ||
         bad_usage
 
     # init flags
-    checkout=false
-    force=false
+    local checkout=false
+    local force=false
 
     # read flag values
     while [ ${#} -ne 0 ]; do
@@ -55,11 +53,17 @@ main() {
     done
 
     # get module names
-    modules=( "$@" )
+    local modules=( "$@" )
     [ ${#modules[@]} -eq 0 ] && bad_usage
 
+    # get base dir location
+    local base_dir="${HOME}/dotfiles"
+    local target_dir="$base_dir/.."
+
     # setup system
-    setup > /dev/null
+    local global_pkg_file="$base_dir/packages"
+    setup && install_packages "$global_pkg_file" ||
+        error "system setup failed"
 
     # checkout submodules if needed
     if $checkout; then
@@ -74,7 +78,14 @@ main() {
         # run setup script if any
         local setup_script="${module}_setup.sh"
         if [ -x "$setup_script" ]; then
-            "$cwd/$setup_script" || error "script failed: $setup_script"
+            "$base_dir/$setup_script" || error "script failed: $setup_script"
+        fi
+
+        # install package requiements if any
+        local package_file="${module}_packages"
+        if [ -e "$package_file" ]; then
+            install_packages "$package_file" ||
+                error "package installation failed"
         fi
 
         # if force set, delete any possible conflicts
@@ -91,7 +102,7 @@ main() {
         stow "$module" || error "stow failed for module: $module"
     done
 
-    exit 0
+    return 0
 }
 
 main "$@"
