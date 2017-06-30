@@ -14,6 +14,8 @@ export LANG=en_US.UTF-8
 export EDITOR="vim"
 export TERMINAL="urxvt"
 [ -e "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
+[ -e "$HOME/Downloads/jdk/bin" ] &&
+    export PATH="$PATH:$HOME/Downloads/jdk/bin"
 
 # aliases
 alias sl='ls --color=auto -F'
