@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tsocks firefox -no-remote -p tsocks
