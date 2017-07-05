@@ -57,4 +57,5 @@ syntax on
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " configure tagbar
-nnoremap <F3> :TagbarToggle<CR>
+nnoremap <F3> :TagbarOpenAutoClose<CR>
+nnoremap <F4> :TagbarToggle<CR>
