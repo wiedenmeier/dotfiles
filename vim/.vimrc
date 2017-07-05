@@ -55,3 +55,6 @@ syntax on
 
 " configure nerdtree
 nnoremap <F2> :NERDTreeToggle<CR>
+
+" configure tagbar
+nnoremap <F3> :TagbarToggle<CR>
