@@ -26,6 +26,7 @@ alias grep='grep --color=auto'
 alias cd..="cd .."
 alias got="git"
 alias watch="watch -c"
+alias maek="make"
 
 # prompt
 PS1="\[\e[1;35m\]-[\[\e[1;32m\]\h\[\e[1;35m\]]- -[\[\e[1;36m\]\w\[\e[1;35m\]]-\n\[\e[1;35m\]-[\[\e[1;36m\]\@\[\e[1;35m\]]-\[\e[0m\]"

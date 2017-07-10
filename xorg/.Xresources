@@ -14,3 +14,9 @@ Xft.rgba: rgb
 URxvt*saveLines: 2000
 URxvt*font: xft:Inconsolata:size=11
 URxvt*scrollBar: false
+
+! xclock setings
+XClock*majorColor: #ebdbb2
+XClock*minorColor: #928374
+XClock*hourColor: #a89984
+XClock*minuteColor: #a89984
