@@ -15,6 +15,9 @@ bindsym $mod+Shift+d exec dmenu_run
 bindsym XF86AudioRaiseVolume exec volup
 bindsym XF86AudioLowerVolume exec voldown
 bindsym XF86AudioMute exec mute
+bindsym XF86AudioPlay exec spotify-pause
+bindsym XF86AudioNext exec spotify-next
+bindsym XF86AudioPrev exec spotify-prev
 
 # kill focused window
 bindsym $mod+Shift+q kill
