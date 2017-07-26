@@ -62,6 +62,7 @@ nnoremap <F3> :TagbarOpenAutoClose<CR>
 nnoremap <F4> :TagbarToggle<CR>
 
 " configure syntastic
+let g:syntastic_python_checkers=['flake8', 'python3']
 let g:syntastic_java_checkers=['javac']
 let g:syntastic_java_javac_config_file_enabled=1
 let g:syntastic_check_on_open=1
