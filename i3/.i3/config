@@ -6,7 +6,7 @@ font pango:Inconsolata 11
 
 # launchers
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+u exec "firefox --new-window"
+bindsym $mod+Shift+u exec "brave"
 bindsym $mod+Shift+p exec zathura
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Shift+d exec dmenu_run
