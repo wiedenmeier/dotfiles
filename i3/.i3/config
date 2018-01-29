@@ -20,7 +20,7 @@ bindsym XF86AudioNext exec spotify-next
 bindsym XF86AudioPrev exec spotify-prev
 bindsym $mod+Pause exec spotify-pause
 bindsym $mod+Left exec spotify-prev
-bindsym $mod+Right exec spotify-prev
+bindsym $mod+Right exec spotify-next
 
 # kill focused window
 bindsym $mod+Shift+q kill
