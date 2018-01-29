@@ -18,6 +18,9 @@ bindsym XF86AudioMute exec mute
 bindsym XF86AudioPlay exec spotify-pause
 bindsym XF86AudioNext exec spotify-next
 bindsym XF86AudioPrev exec spotify-prev
+bindsym $mod+Pause exec spotify-pause
+bindsym $mod+Left exec spotify-prev
+bindsym $mod+Right exec spotify-prev
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -39,23 +42,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -124,12 +115,6 @@ mode "resize" {
         bindsym k resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
-
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -139,13 +124,21 @@ bindsym $mod+r mode "resize"
 
 # bar config
 bar {
-        mode invisible
+        position top
 }
 
+# disable borders
+new_window pixel 4
+
+# configure gaps
+#smart_gaps on
+gaps inner 10
+gaps outer 5
+
 # application rules
-for_window [class="mpv"] floating disable, border 1pixel
-for_window [class="Sxiv"] floating enable, border normal
-for_window [class="qjackctl"] floating enable, border normal
+for_window [class="mpv"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="qjackctl"] floating enable
 
 # run .xconfig script (required as gdm doesn't see .xsession when ~ encrypted)
 exec ~/.xconfig

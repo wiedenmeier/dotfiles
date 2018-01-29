@@ -9,6 +9,9 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+COMPLETION_PATH="/usr/share/bash-completion/bash_completion"
+[ -f $COMPLETION_PATH ] && . $COMPLETION_PATH
+
 # env vars
 export LANG=en_US.UTF-8
 export EDITOR="vim"
