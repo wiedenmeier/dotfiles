@@ -1,3 +1,6 @@
+# run .xconfig script (required as gdm doesn't see .xsession when ~ encrypted)
+exec ~/.xconfig
+
 # mod key
 set $mod Mod1
 
@@ -126,6 +129,7 @@ bar {
 new_window pixel 3
 
 # configure gaps
+smart_borders on
 smart_gaps on
 gaps inner 8
 gaps outer 2
@@ -135,15 +139,12 @@ for_window [class="mpv"] floating enable
 for_window [class="Sxiv"] floating enable
 for_window [class="qjackctl"] floating enable
 
-# run .xconfig script (required as gdm doesn't see .xsession when ~ encrypted)
-exec ~/.xconfig
-
+# colors from xrdb
 set_from_resource $bg i3wm.background #000000
 set_from_resource $fg i3wm.foreground #000000
 set_from_resource $grey i3wm.color8 #000000
 set_from_resource $green i3wm.color2 #000000
 
-# colors from xrdb
 # class                 border  bg      fg      indic.  child
 client.focused          $green  $green  $bg     $bg     $green
 client.focused_inactive $grey     $grey   $bg     $bg     $grey
