@@ -1,7 +1,9 @@
 #!/bin/bash
 
-xmodmap ~/.Xmodmap
 xrdb -I$HOME merge ~/.Xresources
+xmodmap ~/.Xmodmap
 xset -dpms
 [ -x ~/.screenlayout/default.sh ] && ~/.screenlayout/default.sh
 [ -x ~/.fehbg ] && ~/.fehbg
+compton --backend glx --vsync opengl-swc --paint-on-overlay \
+    --glx-no-rebind-pixmap --sw-opti -cCGf &

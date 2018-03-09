@@ -4,3 +4,4 @@ x11-xserver-utils
 arandr
 feh
 fonts-inconsolata
+compton
