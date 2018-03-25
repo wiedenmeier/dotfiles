@@ -1,0 +1,2 @@
+#!/bin/bash
+sleep 0.2 && scrot -s -e 'mv $f /tmp/ && notify-send scrot: /tmp/$f'

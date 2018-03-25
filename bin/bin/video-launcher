@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BROWSER_CMD="google-chrome-stable --new-window"
+WEBSITES=( netflix.com amazon.com/video )
+WEBSITE=$(printf '%s\n' ${WEBSITES[@]} | dmenu -p SITE)
+CMD="$BROWSER_CMD $WEBSITE"
+echo "$CMD"
+$CMD
