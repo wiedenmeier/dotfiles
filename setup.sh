@@ -22,6 +22,7 @@ Usage: ${0##*/} [options] module ...
 
     options:
         -c  checkout repo submodules before taking any action
+        -e  install extra useful packages
         -f  force overwrite a dotfile that already exists
 EOF
 }
@@ -33,7 +34,7 @@ bad_usage() {
 
 main() {
     # parse args
-    local opts="fc"
+    local opts="fce"
     local getopt_out=$(getopt --name "${0##*/}" \
         --options "${opts}" -- "${@}") &&
         eval set -- "${getopt_out}" ||
@@ -41,12 +42,14 @@ main() {
 
     # init flags
     local checkout=false
+    local extra_pkgs=false
     local force=false
 
     # read flag values
     while [ ${#} -ne 0 ]; do
         case ${1} in
             -c) checkout=true; shift;;
+            -e) extra_pkgs=true; shift;;
             -f) force=true; shift;;
             --) shift; break;;
         esac
@@ -64,6 +67,12 @@ main() {
     local global_pkg_file="$base_dir/packages"
     setup && install_packages "$global_pkg_file" ||
         error "system setup failed"
+
+    if $extra_pkgs; then
+        local extra_pkg_file="$base_dir/extra_packages"
+        install_packages "$extra_pkg_file" ||
+            error "could not install extra packages"
+    fi
 
     # checkout submodules if needed
     if $checkout; then

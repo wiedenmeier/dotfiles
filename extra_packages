@@ -1,0 +1,25 @@
+# pdf/document utilities
+zathura
+texlive
+aspell
+
+# media
+mpv
+sxiv
+ffmpeg
+pavucontrol
+
+# generally useful
+htop
+iotop
+wget
+lm-sensors
+psensor
+
+# dev utils
+build-essential
+
+# python utils
+python3-pip
+python3-flake8
+tox
