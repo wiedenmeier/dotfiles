@@ -54,6 +54,9 @@ let g:gruvbox_contrast_dark="medium"
 filetype plugin indent on
 syntax on
 
+" bind :make
+nnoremap <F8> :make<CR>
+
 " configure nerdtree
 nnoremap <F2> :NERDTreeToggle<CR>
 
