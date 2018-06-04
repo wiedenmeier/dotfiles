@@ -37,3 +37,6 @@
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/.vim/bundle/vim-hcl"]
+	path = vim/.vim/bundle/vim-hcl
+	url = https://github.com/b4b4r07/vim-hcl.git
