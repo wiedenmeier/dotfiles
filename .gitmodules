@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/vim-hcl"]
 	path = vim/.vim/bundle/vim-hcl
 	url = https://github.com/b4b4r07/vim-hcl.git
+[submodule "vim/.vim/bundle/kotlin-vim"]
+	path = vim/.vim/bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim
