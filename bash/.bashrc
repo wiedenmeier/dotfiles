@@ -15,7 +15,8 @@ COMPLETION_PATH="/usr/share/bash-completion/bash_completion"
 # env vars
 export LANG=en_US.UTF-8
 export EDITOR="vim"
-export TERMINAL="urxvt"
+export TERMINAL="rxvt-unicode-256color"
+export TERM="rxvt-unicode-256color"
 [ -e "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 [ -e "$HOME/Downloads/jdk/bin" ] &&
     export PATH="$PATH:$HOME/Downloads/jdk/bin"
@@ -30,6 +31,7 @@ alias cd..="cd .."
 alias got="git"
 alias watch="watch -c"
 alias maek="make"
+alias gradle="./gradlew --no-daemon --info"
 
 # prompt
 PS1="\[\e[1;35m\]-[\[\e[1;32m\]\h\[\e[1;35m\]]- -[\[\e[1;36m\]\w\[\e[1;35m\]]-\n\[\e[1;35m\]-[\[\e[1;36m\]\@\[\e[1;35m\]]-\[\e[0m\]"
