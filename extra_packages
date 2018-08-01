@@ -15,6 +15,7 @@ iotop
 wget
 lm-sensors
 psensor
+jq
 
 # dev utils
 build-essential
