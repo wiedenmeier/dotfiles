@@ -78,3 +78,6 @@ nnoremap <F6> :SyntasticCheck<CR>
 nnoremap <F7> :let g:syntastic_java_javac_config_file=
     \systemlist("git rev-parse --show-toplevel")[0]
     \."/.syntastic_javac_config"<CR>
+
+" configure nvim terminal keybinds
+tnoremap <Esc> <C-\><C-n>
