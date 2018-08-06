@@ -82,4 +82,4 @@ nnoremap <F7> :let g:syntastic_java_javac_config_file=
     \."/.syntastic_javac_config"<CR>
 
 " configure nvim terminal keybinds
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-]> <C-\><C-n>
