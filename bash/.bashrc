@@ -21,6 +21,10 @@ export TERM="rxvt-unicode-256color"
 [ -e "$HOME/Downloads/jdk/bin" ] &&
     export PATH="$PATH:$HOME/Downloads/jdk/bin"
 
+# gcloud
+[ -e "$HOME/Downloads/gcloud/bin" ] &&
+    export PATH="$PATH:$HOME/Downloads/gcloud/bin"
+
 # secret aliases
 [ -e "$HOME/.bash-secret-env" ] && . "$HOME/.bash-secret-env"
 
@@ -34,7 +38,7 @@ alias cd..="cd .."
 alias got="git"
 alias watch="watch -c"
 alias maek="make"
-alias gradle="./gradlew --no-daemon --info"
+alias gradle="./gradlew --info"
 alias jq="jq -C"
 alias less="less -R"
 
