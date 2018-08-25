@@ -83,3 +83,11 @@ nnoremap <F7> :let g:syntastic_java_javac_config_file=
 
 " configure nvim terminal keybinds
 tnoremap <C-]> <C-\><C-n>
+
+" java complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+nnoremap <F9> <Plug>(JavaComplete-Imports-AddSmart)
+nnoremap <F10> <Plug>(JavaComplete-Imports-Add)
+nnoremap <F11> <Plug>(JavaComplete-Imports-AddMissing)
+nnoremap <F12> <Plug>(JavaComplete-Imports-RemoveUnused)
+
