@@ -87,7 +87,8 @@ tnoremap <C-]> <C-\><C-n>
 " autocomplete config
 set dictionary='/usr/share/dict/words'
 autocmd FileType vim let b:vcm_tab_complete='vim'
-autocmd FileType java let b:vcm_tab_complete='omni'
+autocmd FileType java let b:vcm_tab_complete='keyword'
+autocmd FileType java inoremap <C-O> <C-X><C-O>
 autocmd FileType markdown let b:vcm_tab_complete='dictionary'
 
 " java complete
