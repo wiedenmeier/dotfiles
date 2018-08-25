@@ -84,10 +84,15 @@ nnoremap <F7> :let g:syntastic_java_javac_config_file=
 " configure nvim terminal keybinds
 tnoremap <C-]> <C-\><C-n>
 
+" autocomplete config
+set dictionary='/usr/share/dict/words'
+autocmd FileType vim let b:vcm_tab_complete='vim'
+autocmd FileType java let b:vcm_tab_complete='omni'
+autocmd FileType markdown let b:vcm_tab_complete='dictionary'
+
 " java complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-nnoremap <F9> <Plug>(JavaComplete-Imports-AddSmart)
-nnoremap <F10> <Plug>(JavaComplete-Imports-Add)
-nnoremap <F11> <Plug>(JavaComplete-Imports-AddMissing)
-nnoremap <F12> <Plug>(JavaComplete-Imports-RemoveUnused)
-
+nnoremap <F9> :JCimportAddSmart<CR>
+nnoremap <F10> :JCimportsAddMissing<CR>
+nnoremap <F11> :JCimportsSort<CR>
+nnoremap <F12> :JCimportsRemoveUnused<CR>
