@@ -25,6 +25,13 @@ export TERM="rxvt-unicode-256color"
 [ -e "$HOME/Downloads/gcloud/bin" ] &&
     export PATH="$PATH:$HOME/Downloads/gcloud/bin"
 
+# go
+export GOPATH="$HOME/code/go"
+[ -e "$GOPATH" ] && export PATH="$PATH:$GOPATH/bin"
+
+# hub git
+which hub > /dev/null && alias git="hub"
+
 # secret aliases
 [ -e "$HOME/.bash-secret-env" ] && . "$HOME/.bash-secret-env"
 
