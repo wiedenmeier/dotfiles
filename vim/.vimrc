@@ -98,4 +98,4 @@ nnoremap <F10> :JCimportsAddMissing<CR>
 nnoremap <F11> :JCimportsSort<CR>
 nnoremap <F12> :JCimportsRemoveUnused<CR>
 let g:JavaComplete_ImportSortType='packageName'
-let g:JavaComplete_ImportOrder=['*', 'javax.', 'java.']
+let g:JavaComplete_ImportOrder=['*', 'javax.', 'java.', 'static']
