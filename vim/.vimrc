@@ -97,3 +97,4 @@ nnoremap <F9> :JCimportAddSmart<CR>
 nnoremap <F10> :JCimportsAddMissing<CR>
 nnoremap <F11> :JCimportsSort<CR>
 nnoremap <F12> :JCimportsRemoveUnused<CR>
+let g:JavaComplete_ImportSortType='packageName'
