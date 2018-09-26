@@ -65,7 +65,7 @@ nnoremap <F3> :TagbarOpenAutoClose<CR>
 nnoremap <F4> :TagbarToggle<CR>
 
 " configure syntastic
-let g:syntastic_python_checkers=['flake8', 'python3']
+let g:syntastic_python_checkers=['flake8', 'python3', 'mypy']
 let g:syntastic_elixir_checkers=["elixir"]
 let g:syntastic_enable_elixir_checker=1
 let g:syntastic_java_checkers=['javac']
