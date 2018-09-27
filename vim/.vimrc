@@ -6,7 +6,7 @@ call pathogen#helptags()
 
 " file management
 set autoread
-set autochdir
+"set autochdir
 
 " indentation
 set tabstop=4
