@@ -6,7 +6,8 @@ call pathogen#helptags()
 
 " file management
 set autoread
-set autochdir
+let NERDTreeChDirMode=1
+autocmd FileType python let NERDTreeChDirMode=0
 
 " indentation
 set tabstop=4
@@ -66,8 +67,6 @@ nnoremap <F4> :TagbarToggle<CR>
 
 " configure syntastic
 let g:syntastic_python_checkers=['flake8', 'python3', 'mypy']
-" disable autochdir for python, it messes with locating mypy.ini
-autocmd FileType python set noautochdir
 autocmd FileType python set completeopt-=preview
 let g:syntastic_elixir_checkers=["elixir"]
 let g:syntastic_enable_elixir_checker=1
