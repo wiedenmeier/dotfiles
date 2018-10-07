@@ -48,6 +48,7 @@ alias maek="make"
 alias gradle="./gradlew --info"
 alias jq="jq -C"
 alias less="less -R"
+alias tree="tree -C"
 
 # prompt
 PS1="\[\e[1;35m\]-[\[\e[1;32m\]\h\[\e[1;35m\]]- -[\[\e[1;36m\]\w\[\e[1;35m\]]-\n\[\e[1;35m\]-[\[\e[1;36m\]\@\[\e[1;35m\]]-\[\e[0m\]"
