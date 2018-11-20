@@ -45,10 +45,24 @@ alias cd..="cd .."
 alias got="git"
 alias watch="watch -c"
 alias maek="make"
-alias gradle="./gradlew --info"
+alias gradle="./gradlew --no-daemon --info"
 alias jq="jq -C"
 alias less="less -R"
 alias tree="tree -C"
+alias noamd="nomad"
+alias nmoad="nomad"
 
 # prompt
 PS1="\[\e[1;35m\]-[\[\e[1;32m\]\h\[\e[1;35m\]]- -[\[\e[1;36m\]\w\[\e[1;35m\]]-\n\[\e[1;35m\]-[\[\e[1;36m\]\@\[\e[1;35m\]]-\[\e[0m\]"
+
+complete -C /home/waw722/dotfiles/bin/bin/nomad nomad
+
+complete -C /home/waw722/dotfiles/bin/bin/consul consul
+
+complete -C /home/waw722/dotfiles/bin/bin/vault vault
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/waw722/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/waw722/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/waw722/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/waw722/Downloads/google-cloud-sdk/completion.bash.inc'; fi
