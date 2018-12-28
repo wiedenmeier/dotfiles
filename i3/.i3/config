@@ -143,6 +143,9 @@ gaps outer 2
 for_window [class="mpv"] floating enable
 for_window [class="Sxiv"] floating enable
 for_window [class="qjackctl"] floating enable
+for_window [title="OpenNERO.*"] floating enable
+for_window [class="org-igoweb-cgoban-CGoban"] floating enable
+for_window [class="virt-manager"] floating enable
 
 # colors from xrdb
 set_from_resource $bg i3wm.background #000000
