@@ -80,7 +80,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors=1
 nnoremap <F5> :SyntasticReset<CR>
 nnoremap <F6> :SyntasticCheck<CR>
-nnoremap <F7> :let g:syntastic_java_javac_config_file=
+nnoremap <F7> :SyntasticToggleMode<CR>
+nnoremap <F12> :let g:syntastic_java_javac_config_file=
     \systemlist("git rev-parse --show-toplevel")[0]
     \."/.syntastic_javac_config"<CR>
 
@@ -96,9 +97,7 @@ autocmd FileType markdown let b:vcm_tab_complete='dictionary'
 
 " java complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-nnoremap <F9> :JCimportAddSmart<CR>
-nnoremap <F10> :JCimportsAddMissing<CR>
-nnoremap <F11> :JCimportsSort<CR>
-nnoremap <F12> :JCimportsRemoveUnused<CR>
+nnoremap <F9> :JCimportsSort<CR>
+nnoremap <F10> :JCimportsRemoveUnused<CR>
 let g:JavaComplete_ImportSortType='packageName'
 let g:JavaComplete_ImportOrder=['*', 'javax.', 'java.', 'static']
