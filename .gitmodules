@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/vim-javacomplete2"]
 	path = vim/.vim/bundle/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "vim/.vim/bundle/bullets.vim"]
+	path = vim/.vim/bundle/bullets.vim
+	url = https://github.com/dkarter/bullets.vim.git

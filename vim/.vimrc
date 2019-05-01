@@ -102,3 +102,6 @@ nnoremap <F9> :JCimportsSort<CR>
 nnoremap <F10> :JCimportsRemoveUnused<CR>
 let g:JavaComplete_ImportSortType='packageName'
 let g:JavaComplete_ImportOrder=['*', 'javax.', 'java.', 'static']
+
+" bullets.vim
+let g:bullets_enabled_file_types = ['markdown', 'text', 'gitcommit']
