@@ -25,7 +25,7 @@ set smartcase
 
 " text formatting
 set showmatch
-set textwidth=120
+set textwidth=140
 set formatoptions=c,q,r,t
 
 " editor display
@@ -68,7 +68,7 @@ nnoremap <F4> :TagbarToggle<CR>
 " configure syntastic
 let g:syntastic_python_checkers=['flake8', 'python3', 'mypy']
 " NOTE: this is better configured per-repo in setup.cfg
-"let g:syntastic_python_flake8_post_args="--max-line-length=120"
+let g:syntastic_python_flake8_post_args="--max-line-length=140"
 autocmd FileType python set completeopt-=preview
 let g:syntastic_elixir_checkers=["elixir"]
 let g:syntastic_enable_elixir_checker=1
