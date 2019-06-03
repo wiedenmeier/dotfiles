@@ -55,6 +55,9 @@ let g:gruvbox_contrast_dark="medium"
 filetype plugin indent on
 syntax on
 
+" search
+nnoremap <LEADER>c :noh<CR>
+
 " bind :make
 nnoremap <F8> :make<CR>
 
