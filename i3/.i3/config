@@ -33,7 +33,7 @@ bindsym $mod+Shift+q kill
 # lock screen
 set $lock i3lock -d -i /usr/share/backgrounds/warty-final-ubuntu.png -t
 bindsym $mod+Delete exec $lock
-bindsym $mod+Shift+Delete exec $lock && systemctl suspend
+bindsym $mod+Shift+Delete exec $lock && sleep 1 && systemctl suspend
 
 # change focus
 bindsym $mod+h focus left
