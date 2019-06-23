@@ -55,15 +55,6 @@
 [submodule "vim/.vim/bundle/vim-elixir"]
 	path = vim/.vim/bundle/vim-elixir
 	url = https://github.com/elixir-editors/vim-elixir.git
-[submodule "vim/.vim/bundle/vim-jst"]
-	path = vim/.vim/bundle/vim-jst
-	url = https://github.com/briancollins/vim-jst.git
-[submodule "vim/.vim/bundle/vim-javascript"]
-	path = vim/.vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim/.vim/bundle/vim-javacomplete2"]
-	path = vim/.vim/bundle/vim-javacomplete2
-	url = https://github.com/artur-shaik/vim-javacomplete2.git
 [submodule "vim/.vim/bundle/bullets.vim"]
 	path = vim/.vim/bundle/bullets.vim
 	url = https://github.com/dkarter/bullets.vim.git
