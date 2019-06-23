@@ -103,5 +103,8 @@ let g:jedi#use_tabs_not_buffers = 1
 let g:goto_definitions_command = "D"
 let g:jedi#popup_on_dot = 0
 
+" gitgutter is being stupidly
+let g:gitgutter_terminal_reports_focus = 0
+
 " bullets.vim
 let g:bullets_enabled_file_types = ['markdown', 'text', 'gitcommit']
