@@ -58,3 +58,6 @@
 [submodule "vim/.vim/bundle/bullets.vim"]
 	path = vim/.vim/bundle/bullets.vim
 	url = https://github.com/dkarter/bullets.vim.git
+[submodule "vim/.vim/bundle/jedi-vim"]
+	path = vim/.vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

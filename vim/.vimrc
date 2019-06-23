@@ -72,7 +72,6 @@ nnoremap <F4> :TagbarToggle<CR>
 let g:syntastic_python_checkers=['flake8', 'python3', 'mypy']
 " NOTE: this is better configured per-repo in setup.cfg
 let g:syntastic_python_flake8_post_args="--max-line-length=140"
-autocmd FileType python set completeopt-=preview
 let g:syntastic_elixir_checkers=["elixir"]
 let g:syntastic_enable_elixir_checker=1
 let g:syntastic_java_checkers=['javac']
@@ -96,15 +95,13 @@ tnoremap <C-]> <C-\><C-n>
 set dictionary='/usr/share/dict/words'
 autocmd FileType vim let b:vcm_tab_complete='vim'
 autocmd FileType java let b:vcm_tab_complete='keyword'
-autocmd FileType java inoremap <C-O> <C-X><C-O>
 autocmd FileType markdown let b:vcm_tab_complete='dictionary'
 
-" java complete
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-nnoremap <F9> :JCimportsSort<CR>
-nnoremap <F10> :JCimportsRemoveUnused<CR>
-let g:JavaComplete_ImportSortType='packageName'
-let g:JavaComplete_ImportOrder=['*', 'javax.', 'java.', 'static']
+" python config
+autocmd FileType python set completeopt-=preview
+let g:jedi#use_tabs_not_buffers = 1
+let g:goto_definitions_command = "D"
+let g:jedi#popup_on_dot = 0
 
 " bullets.vim
 let g:bullets_enabled_file_types = ['markdown', 'text', 'gitcommit']
