@@ -149,6 +149,7 @@ for_window [title="OpenNERO.*"] floating enable
 for_window [class="org-igoweb-cgoban-CGoban"] floating enable
 for_window [class="virt-manager"] floating enable
 for_window [class="Nautilus"] floating enable
+for_window [class="zdoom"] floating enable
 
 # colors from xrdb
 set_from_resource $bg i3wm.background #000000
