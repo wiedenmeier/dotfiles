@@ -95,7 +95,10 @@ tnoremap <C-]> <C-\><C-n>
 set dictionary='/usr/share/dict/words'
 autocmd FileType vim let b:vcm_tab_complete='vim'
 autocmd FileType java let b:vcm_tab_complete='keyword'
+
+" markdonw conf
 autocmd FileType markdown let b:vcm_tab_complete='dictionary'
+autocmd FileType markdown set textwidth=80
 
 " python config
 autocmd FileType python set completeopt-=preview
