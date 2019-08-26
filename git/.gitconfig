@@ -3,3 +3,5 @@
 	name = Wesley Wiedenmeier
 [push]
 	default = simple
+[core]
+	symlinks = true
