@@ -29,6 +29,11 @@ export TERM="rxvt-unicode-256color"
 export GOPATH="$HOME/code/go"
 [ -e "$GOPATH" ] && export PATH="$PATH:$GOPATH/bin"
 
+# android sdk platform tools
+export ANDROID_HOME="$HOME/Android/Sdk/"
+android_sdk_path="$ANDROID_HOME/platform-tools"
+[ -e "$android_sdk_platform_tools_path" ] && export PATH="$PATH:$android_sdk_platform_tools_path"
+
 # hub git
 which hub > /dev/null && alias git="hub"
 
