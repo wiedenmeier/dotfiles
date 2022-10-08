@@ -106,6 +106,9 @@ let g:jedi#use_tabs_not_buffers = 1
 let g:goto_definitions_command = "D"
 let g:jedi#popup_on_dot = 0
 
+" js config
+autocmd BufNewFile,BufRead *.ts,*.tsx,*.jsx set syntax=javascript
+
 " gitgutter is being stupidly
 let g:gitgutter_terminal_reports_focus = 0
 
